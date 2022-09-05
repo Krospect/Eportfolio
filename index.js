@@ -1,7 +1,27 @@
-//template_pgx4pqd
-//service_b253ivo
-//3Rxi4lP9vG0P8ZMOz
+let isModalOpen =false;
+let contrastToggle = false;
+const scaleFactor =1/2;
 
+function moveBackground(event){
+    const shapes=document.querySelectorAll(".shape");
+    const x = event.clientX/20;
+    const y = event.clientY/20;
+    for(let i=0; i < shapes.length;i++){
+        const isOdd= i % 2 !==0;
+        const boolInt = isOdd ? -1 : 1;
+        shapes[i].style.transform = `translate(${x * boolInt}px, ${y * boolInt}px) rotate(${x * boolInt * 10}deg)`
+    }
+}
+
+function toggleContrast(){
+    contrastToggle=!contrastToggle;
+    if(contrastToggle){
+        document.body.classList += " dark-theme"
+    }
+    else{
+        document.body.classList.remove("dark-theme")
+    }
+}
 
 function contact(event){
     event.preventDefault();
@@ -26,7 +46,7 @@ function contact(event){
 
         })
 }
-let isModalOpen=false;
+
 function toggleModal(){
     if(isModalOpen){
         isModalOpen=false;
@@ -36,3 +56,4 @@ function toggleModal(){
     //toggle modal
     document.body.classList += " modal--open"
 }
+
