@@ -18,7 +18,9 @@ li {
 p {
   line-height: 1.5;
   font-size: 16px;
+  z-index: 1;
 }
+
 
 a {
   text-decoration: none;
@@ -101,7 +103,8 @@ textarea:focus {
 }
 
 .orange {
-  color: #f06449 !important;
+  color: #00a300 !important;
+  /*#00a300*/
 }
 
 .link__hover-effect {
@@ -157,7 +160,7 @@ nav,
 }
 
 .dark-theme section {
-  background-color: #242424;
+  background-color: black;
 }
 
 .dark-theme #personal-logo {
@@ -178,6 +181,14 @@ nav,
   color: #242424;
 }
 
+.dark-theme .color__change{
+    color: #f06449 !important;
+}
+
+.dark-theme .color__changer{
+    background-color: #f06449;
+}
+
 /* Landing Page */
 
 #landing-page {
@@ -192,12 +203,14 @@ nav,
   width: 100%;
   max-width: 1000px;
   padding: 0 30px;
+  z-index: 1;
 }
 
 .header__para {
   font-size: 24px;
   line-height: 2;
   max-width: 450px;
+  z-index: 1;
 }
 
 .social__list {
@@ -206,7 +219,7 @@ nav,
 }
 
 .social__link {
-  background-color: #f06449;
+  background-color: #00a300;
   color: white;
   padding: 6px;
   width: 32px;
@@ -367,6 +380,8 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
+  filter: brightness(35%);
+  transform: scale(.9);
 }
 
 .modal__language:hover .language__name {
@@ -374,8 +389,8 @@ nav {
 }
 
 .modal__language:hover {
-  filter: brightness(80%);
-  transform: scale(0.9);
+  filter: brightness(100%);
+  transform: scale(1);
 }
 
 .language__name {
@@ -492,6 +507,10 @@ nav {
   text-align: center;
   font-size: 48px;
   margin-bottom: 60px;
+}
+
+.poject{
+    margin-bottom: 135px;
 }
 
 .project__img {
